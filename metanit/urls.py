@@ -21,5 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='home'),
     path('about/', views.about, kwargs={'name':'Tom', 'age':38}, name='about'),
-    path('contact/', views.contact, name='contact')
+    path('contact/', views.contact, name='contact'),
+    path('user/', views.user),
+    path('user/<str:name>/<int:age>', views.user),
 ]
